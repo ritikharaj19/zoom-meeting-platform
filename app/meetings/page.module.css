@@ -1,0 +1,224 @@
+.meetingsContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.leftSidebar {
+  width: 320px;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabsHeader {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  padding-left: 20px;
+}
+
+.refreshIcon {
+  cursor: pointer;
+  margin-right: 24px;
+}
+
+.tabList {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 2px;
+  flex: 1;
+}
+
+.activeTab {
+  background-color: transparent;
+  color: var(--primary-color);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 20px;
+  text-align: center;
+  flex: 1;
+}
+
+.sidebarContent {
+  padding: 16px 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.pmiSection {
+  text-align: center;
+  padding: 12px 0;
+}
+
+.pmiNumber {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.pmiLabel {
+  font-size: 13px;
+  color: #888;
+}
+
+.sidebarDivider {
+  height: 1px;
+  background-color: #f0f0f0;
+  margin: 16px 0;
+}
+
+.dateHeader {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.upcomingList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.miniMeetingCard {
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #333;
+}
+
+.miniMeetingCard:hover:not(.selectedCard) {
+  background-color: #f5f5f5;
+}
+
+.selectedCard {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.miniTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.miniTime, .miniHost, .miniId {
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #666;
+}
+
+.selectedCard .miniTime, 
+.selectedCard .miniHost, 
+.selectedCard .miniId {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.addCalendarContainer {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: center;
+}
+
+.addCalendarBtn {
+  background: transparent;
+  color: var(--primary-color);
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.addCalendarBtn span {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.addCalendarBtn:hover {
+  opacity: 0.8;
+}
+
+/* Right Content */
+.rightContent {
+  flex: 1;
+  padding: 64px;
+}
+
+.pageTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.meetingDetails {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.actionsRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.startBtn {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 6px;
+  padding: 8px 32px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.startBtn:hover {
+  background-color: var(--primary-hover);
+}
+
+.outlineBtn {
+  background-color: white;
+  border: 1px solid #dcdcdc;
+  color: #333;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  transition: background-color 0.2s;
+}
+
+.outlineBtn:hover {
+  background-color: #f5f5f5;
+}
+
+.textBtn {
+  background: transparent;
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.textBtn:hover {
+  text-decoration: underline;
+}

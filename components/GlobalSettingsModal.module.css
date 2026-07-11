@@ -1,0 +1,523 @@
+.overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.modal {
+  background: white;
+  width: 800px;
+  height: 600px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #f1f3f6;
+}
+.header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+.closeBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.closeBtn:hover {
+  color: #1a1a1a;
+}
+.body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+.sidebar {
+  width: 220px;
+  border-right: 1px solid #f1f3f6;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #555;
+  font-size: 14px;
+  font-weight: 500;
+}
+.tab:hover {
+  background-color: #f7f9fa;
+}
+.activeTab {
+  background-color: #e6f0ff;
+  color: var(--primary-color);
+}
+.tabIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f3f6;
+}
+.activeIcon {
+  background-color: #4384f5;
+}
+.content {
+  flex: 1;
+  padding: 32px 40px;
+  overflow-y: auto;
+  color: #1a1a1a;
+}
+.section {
+  margin-bottom: 40px;
+}
+.section h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.subtext {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.infoIcon {
+  display: inline-block;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  color: #999;
+  font-size: 10px;
+  text-align: center;
+  line-height: 12px;
+  cursor: help;
+}
+.themeOptions {
+  display: flex;
+  gap: 24px;
+}
+.themeOption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.themeCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.selectedTheme {
+  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--primary-color);
+}
+.themeClassic {
+  background: #f1f3f6;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+.themeClassic::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 50%;
+  background: #333;
+}
+.themeBloom { background: #4384f5; }
+.themeAgave { background: #5f8680; }
+.themeRose { background: #b66d7b; }
+
+.navRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.linkText {
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+.linkText:hover {
+  text-decoration: underline;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+.checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.placeholderContent {
+  color: #666;
+}
+
+/* Audio Settings */
+.audioSection {
+  margin-bottom: 24px;
+}
+.audioSection h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.audioControlRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.testBtn {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  width: 120px;
+}
+.testBtn:hover {
+  background: #f1f3f6;
+}
+.deviceSelect {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  background-color: white;
+  cursor: pointer;
+}
+.sliderRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.sliderLabel {
+  width: 120px;
+  font-size: 14px;
+  color: #333;
+}
+.volumeSlider {
+  flex: 1;
+  accent-color: #4384f5;
+  cursor: pointer;
+}
+.levelRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.levelLabel {
+  width: 120px;
+  font-size: 13px;
+  color: #333;
+}
+.levelBar {
+  flex: 1;
+  height: 6px;
+  background: #f1f3f6;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.levelFill {
+  height: 100%;
+  background: #4384f5;
+  border-radius: 3px;
+}
+.audioCheckboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* Video Settings */
+.videoTabContainer {
+  display: flex;
+  flex-direction: column;
+}
+.videoPreviewArea {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #2d2d2d;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.videoElement {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform: scaleX(-1); /* Mirror effect */
+}
+.videoFallback {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.videoCheckboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.hardwareTitle {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 4px;
+}
+.hardwareCheckboxes {
+  display: flex;
+  gap: 32px;
+}
+
+/* Chat Settings */
+.chatTabContainer {
+  display: flex;
+  flex-direction: column;
+}
+.chatSectionTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+.chatSectionTitle:first-child {
+  margin-top: 0;
+}
+.chatCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.chatSubSection {
+  margin-bottom: 16px;
+}
+.chatSubSection:last-child {
+  margin-bottom: 0;
+}
+.chatSubTitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+.sidebarLookOptions {
+  display: flex;
+  gap: 16px;
+}
+.lookBox {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+}
+.lookLight {
+  background-color: #fff;
+}
+.lookDark {
+  background-color: #2b2b2b;
+}
+.lookSelected {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 1px var(--primary-color);
+}
+.chatDivider {
+  height: 1px;
+  background-color: #f1f3f6;
+  margin: 16px -16px;
+}
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.radioLabel:last-child {
+  margin-bottom: 0;
+}
+.radioInput {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary-color);
+  cursor: pointer;
+}
+.radioSubText {
+  font-size: 13px;
+  color: #666;
+  margin-left: 28px;
+  margin-top: 4px;
+}
+.chatRowItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.chatActionBtn {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+}
+.chatActionBtn:hover {
+  background: #f7f9fa;
+}
+.translationSettings {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.chatSelect {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  outline: none;
+}
+.translationCards {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.transCard {
+  flex: 1;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.transCardBody {
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  min-height: 80px;
+}
+.transAvatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background-color: #4a773c; /* Green color for avatar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.transBubble {
+  background-color: #f1f3f6;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border-top-left-radius: 4px;
+  font-size: 13px;
+  color: #333;
+  width: fit-content;
+}
+.transCardFooter {
+  background-color: #f7f9fa;
+  padding: 12px 16px;
+  border-top: 1px solid #e0e0e0;
+}
+.alertBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: #fff9e6;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 16px;
+}
+.toggleSwitch {
+  width: 40px;
+  height: 24px;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.toggleOn {
+  background-color: var(--primary-color);
+}
+.toggleOff {
+  background-color: #ccc;
+}
+.toggleKnob {
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.knobOn {
+  transform: translateX(16px);
+}
+.knobOff {
+  transform: translateX(0);
+}

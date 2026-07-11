@@ -1,0 +1,412 @@
+.pageContainer {
+  background-color: white;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+/* Header */
+.globalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  height: 60px;
+  border-bottom: 1px solid #e0e0e0;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerLeft, .headerRight {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 24px;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  margin-right: 16px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.navLinks span {
+  cursor: pointer;
+}
+
+.navLinks span:hover {
+  color: var(--primary-color);
+}
+
+.avatarMini {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #5d3bc1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Main Content */
+.mainContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.profileBanner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.avatarLarge {
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  background-color: #5d3bc1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 48px;
+}
+
+.profileName {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.profileEmail {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 32px;
+}
+
+.sectionHeader {
+  background-color: #f7f9fa;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.fieldRow {
+  display: flex;
+  padding: 16px;
+  border-bottom: 1px solid #f1f3f6;
+}
+
+.fieldRow:last-child {
+  border-bottom: none;
+}
+
+.fieldLabel {
+  width: 250px;
+  font-size: 14px;
+  color: #555;
+}
+
+.fieldValue {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+}
+
+.fieldAction {
+  width: 100px;
+  text-align: right;
+  font-size: 14px;
+  color: var(--primary-color);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.fieldAction:hover {
+  text-decoration: underline;
+}
+
+.fieldSub {
+  color: #666;
+  margin-left: 12px;
+}
+
+.urlLink {
+  color: #555;
+  margin: 8px 0;
+  word-break: break-all;
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  color: #555;
+}
+
+.upgradeLink {
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.upgradeLink:hover {
+  text-decoration: underline;
+}
+
+/* Edit Form Styles */
+.editForm {
+  margin-bottom: 8px;
+}
+
+.editInput {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 300px;
+  max-width: 100%;
+  outline: none;
+  font-family: inherit;
+}
+
+.editInput:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(11, 92, 255, 0.2);
+}
+
+.editActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.saveBtn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.saveBtn:hover {
+  background: var(--primary-hover);
+}
+
+.cancelBtn {
+  background: white;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.cancelBtn:hover {
+  background: #f1f3f6;
+}
+
+/* License Grid */
+.licenseGrid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.licenseLabel {
+  color: #555;
+}
+
+.licenseVal {
+  color: #333;
+}
+
+/* Device Table */
+.deviceTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.deviceTable th, .deviceTable td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #f1f3f6;
+}
+
+.deviceTable th {
+  color: #666;
+  font-weight: 500;
+}
+
+/* Footer */
+.globalFooter {
+  background-color: #2b2e3e;
+  color: #fff;
+  padding: 60px 24px;
+  margin-top: 60px;
+}
+
+.footerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footerCol h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.footerCol ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerCol li {
+  font-size: 12px;
+  color: #b9bcc5;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.footerCol li:hover {
+  color: white;
+}
+
+.footerMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 200px;
+}
+
+.metaGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metaGroup label {
+  font-size: 12px;
+  color: #b9bcc5;
+}
+
+.footerSelect {
+  background-color: transparent;
+  border: 1px solid #5a5d6a;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  outline: none;
+  font-size: 12px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #5a5d6a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.socialIcon:hover {
+  background-color: var(--primary-color);
+}
+
+/* FAB */
+.fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(11, 92, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.fabIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 2px solid white;
+  position: relative;
+}
+
+.fabIcon::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 12px;
+  height: 2px;
+  background: white;
+  box-shadow: 0 4px 0 white;
+}
+
+.configureBtn {
+  background-color: #f1f3f6;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #333;
+}
+.configureBtn:hover {
+  background-color: #e6e9eb;
+}
